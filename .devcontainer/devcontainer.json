@@ -1,0 +1,25 @@
+{
+  "name": "Bajaj Internship Task",
+  "image": "mcr.microsoft.com/devcontainers/java:17-jdk-ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "17",
+      "installMaven": true
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "pivotal.vscode-spring-boot",
+        "redhat.java"
+      ],
+      "settings": {
+        "java.home": "/usr/local/sdkman/candidates/java/current",
+        "maven.executable.path": "/usr/local/sdkman/candidates/maven/current/bin/mvn"
+      }
+    }
+  },
+  "postCreateCommand": "echo 'Java and Maven are ready! Run: mvn clean package'",
+  "remoteUser": "vscode"
+}
